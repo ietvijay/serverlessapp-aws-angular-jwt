@@ -1,0 +1,35 @@
+
+    <div class="row">
+         
+              <div class="col-sm-12">
+                  <div class="page-header">
+                      <h3>Movies</h1>      
+                 </div>
+                 
+                  <table class="table table-striped ">
+                      <thead>
+                        <tr>
+                          <th>#</th>
+                           <th>Year</th>
+                          <th>Title</th>
+                          <th>Genre</th>
+                          <th>Language</th>
+                        </tr>
+                      </thead>
+                      <tbody >
+                          <tr ng-repeat="m in vm.movies">
+                            <th scope="row">{{$index +1}}</th>
+                               <td>{{m.year}}</td>
+                              <td>{{m.title}}</td>
+                              <td>{{m.genre}}</td>
+                              <td>{{m.language}}</td>
+                          </tr>
+                       </tbody>
+                       </table>
+              
+                </div>
+                <div ng-class="vm.loading ? 'loading' :' ' " ></div>
+            
+        
+     </div>
+        

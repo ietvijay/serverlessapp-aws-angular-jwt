@@ -1,0 +1,8 @@
+{
+  "name": "node-jwt-creat",
+  "main": "server.js",
+  "dependencies": {
+    "aws-sdk": "^2.131.0",
+    "njwt": "^0.4.0"
+  }
+}

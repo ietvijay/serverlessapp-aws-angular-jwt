@@ -1,0 +1,84 @@
+<html>  
+    <head>
+        <title>Sample App</title>
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="app-content/css/style.css" rel="stylesheet" />
+              <!-- vendor scripts -->
+
+    </head>
+
+
+    <body ng-app="mainApp">
+    
+
+        <!-- Main Container -->
+            <div class="containter" >
+                  <div class="row">
+                            
+                                <div class="col-sm-1">
+                                  </div>
+                                  <div class="col-sm-10">
+                                        <nav class="navbar navbar-inverse">
+                                                <div class="navbar-header"> 
+                                                    <a class="navbar-brand" href='#'>Movies</a>
+                                                    <ul class="nav navbar-nav" ng-controller="Nav.IndexController as ctrl">
+                                                        <li class="active">
+                                                            <a ui-sref="home" >Home</a>
+                                                        </li>
+                                                        <li >
+                                                            <a ui-sref="new-release" >New Release</a>
+                                                      </li>
+                                                      <li ng-show="ctrl.isAdmin">
+                                                        <a ui-sref="upload" >Upload</a>
+                                                     </li> 
+
+                                                      <li class="dropdown">
+                                                            
+                                                                <a ng-show="ctrl.isLogin" ui-sref="logout" data-toggle="dropdown" ng-click="ctrl.logout()" >Logout</a>
+                                                                <a ng-show="!ctrl.isLogin" ui-sref="login" >Login</a>
+                
+                                                               
+                                                            
+                                                        <li>
+                                    
+                                                    </ul>
+                                                </div>
+                                    
+                                            </nav>
+                                    <ui-view></ui-view>
+                                  
+                                    </div>
+                            
+                                
+                                     <div class="col-sm-1">
+                                      </div>
+                            
+                            </div>
+                            
+
+                    
+                           
+            
+            </div>
+
+      <!-- angular scripts -->
+      <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+      <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script> 
+      <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.min.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.6/ngStorage.min.js"></script> 
+          
+
+            <!-- application scripts -->
+      <script src="_env.js"></script>
+      <script src="app.js"></script>
+      <script src="app-services/authentication.service.js"></script>
+      <script src="app-services/movies.service.js"></script>
+      <script src="app-services/users.service.js"></script>
+      
+      <script src="upload/index.controller.js"></script>
+      <script src="home/index.controller.js"></script>
+      <script src="login/index.controller.js"></script>
+      <script src="new-release/index.controller.js"></script>
+      <script src="app-nav/nav.controller.js"></script>
+    </body>
+</html>
