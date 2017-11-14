@@ -1,4 +1,4 @@
-# serverlessapp-aws-angular-jwt
+# ServerLess Sample Application
 
 This is a sample project to demonstrate serverless application using angularJs, JWT, aws services: S3, api gateway, lambda, dynamoDb.
 
